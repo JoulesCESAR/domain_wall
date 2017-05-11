@@ -18,7 +18,7 @@ r_c = 0.5e-9
 
 for x in [ 0.1*r_c, 0.2*r_c, 0.3*r_c, 0.4*r_c, 0.5*r_c]:
 
-   P = sqrt(-alpha/beta - 0.5 * ((epsilon_1*t*d)/(beta*D**2))*(1-exp(-2 * pi*(D/d)))) * tanh(x/(2*r_c))
-   print P
+    P = sqrt(-alpha/beta - 0.5 * ((epsilon_1*t*d)/(beta*D**2))*(1-exp(-2 * pi*(D/d)))) * tanh(x/(2*r_c))
+    print P
 
 print alpha_0, beta, epsilon_0, epsilon_1
