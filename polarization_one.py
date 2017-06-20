@@ -1,24 +1,30 @@
 # Script for calculation of ferroelectric wall domain profile
 
 from math import *
+from numpy import *
+import matplotlib.pyplot as plt
 
-alpha_0 = 7.5e5
-T = 600
 
-alpha = alpha_0 * (T - 752)
+p = 0.75
 beta = -2.92e8
-epsilon_0 = 8.8541878176e-12
-t = 1e-9
-D = 10e-9
-d = 5e-9
+g = 0.54e-10
+xi = 1.56e9
 
-epsilon_1 = 4.0/(epsilon_0 * (pi**3))
 
-r_c = 0.5e-9
+w = sqrt(g) / (p * (xi * pi ** 2 + 0.5 * beta) ** 0.5)
+C = (6.0 * xi * p**2 + 3.0 * beta)/(4.0 * xi * p**2 + 3.0 * beta)
 
-for x in [ 0.1*r_c, 0.2*r_c, 0.3*r_c, 0.4*r_c, 0.5*r_c]:
+x = arange(-7.0*w*1e9, 7.0*w*1e9, 0.001)
+P = (p * sinh((x*1e-9)/w))/sqrt(C + sinh((x*1e-9)/w)**2)
+  
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
 
-    P = sqrt(-alpha/beta - 0.5 * ((epsilon_1*t*d)/(beta*D**2))*(1-exp(-2 * pi*(D/d)))) * tanh(x/(2*r_c))
-    print P
+plt.plot(x, P, 'b-', linewidth=2)
 
-print alpha_0, beta, epsilon_0, epsilon_1
+plt.xlabel(r'\textit{$x$} ($nm$)')
+plt.ylabel(r'\textit{$P$} ($C/m^2$)',fontsize=16)
+
+
+plt.savefig('figure2.eps', figsize=(3.30, 3.30), dpi=100)
+plt.show()
