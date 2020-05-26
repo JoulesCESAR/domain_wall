@@ -29,10 +29,10 @@ T1 = 298.15
 T2 = 500.0
 T3 = 637.67
 
-A0 = alpha0*(T0 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
-A1 = alpha0*(T1 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
-A2 = alpha0*(T2 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
-A3 = alpha0*(T3 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
+A0 = alpha0*(T0 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
+A1 = alpha0*(T1 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
+A2 = alpha0*(T2 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
+A3 = alpha0*(T3 -752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
 
 p0 = sqrt((-beta + sqrt(beta**2-4.0*A0*xi))/(2*xi))
 p1 = sqrt((-beta + sqrt(beta**2-4.0*A1*xi))/(2*xi))
@@ -68,8 +68,8 @@ plt.plot(x, P1, '--',color ='blue',linewidth=1.5, label=r'\textit{$T = 298.15 K$
 plt.plot(x, P2, '-.',color = 'green', linewidth=1.5, label=r'\textit{$T = 500 K$}')
 plt.plot(x, P3, ':', color='red', linewidth=1.5, label=r'\textit{$T = 637.67 K$}')
 
-plt.xlabel(r'\textit{$x$} ($nm$)')
-plt.ylabel(r'\textit{$P$} ($C/m^2$)',fontsize=16)
+plt.xlabel(r'$x$ ($nm$)')
+plt.ylabel(r'$P$ ($C/m^2$)',fontsize=16)
 plt.legend(loc=2)
 
 plt.savefig('figure3.eps', figsize=(3.30, 3.30), dpi=100)

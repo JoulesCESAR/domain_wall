@@ -23,15 +23,15 @@ t = 0.2e-9
 n = 3.0
 T = 298.15
 
-D0 = 5.47e-9 
+D0 = 5.47e-9
 D1 = 6.0e-9
 D2 = 10.0e-9
 D3 = 15.0e-9
 
-A0 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D0))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
-A1 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D1))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
-A2 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D2))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
-A3 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D3))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma 
+A0 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D0))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
+A1 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D1))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
+A2 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D2))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
+A3 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D3))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma
 
 p0 = sqrt((-beta + sqrt(beta**2-4.0*A0*xi))/(2*xi))
 p1 = sqrt((-beta + sqrt(beta**2-4.0*A1*xi))/(2*xi))
@@ -67,8 +67,8 @@ plt.plot(x, P1, '--',color ='blue',linewidth=1.2, label=r'\textit{$D = 6 nm$}')
 plt.plot(x, P2, '-.',color = 'green', linewidth=1.2, label=r'\textit{$D = 10nm$}')
 plt.plot(x, P3, ':', color='red', linewidth=1.2, label=r'\textit{$D = 15nm$}')
 
-plt.xlabel(r'\textit{$x$} ($nm$)')
-plt.ylabel(r'\textit{$P$} ($C/m^2$)',fontsize=16)
+plt.xlabel(r'$x$ ($nm$)')
+plt.ylabel(r'$P$ ($C/m^2$)',fontsize=16)
 plt.legend(loc=2)
 
 plt.savefig('figure4.eps', figsize=(3.30, 3.30), dpi=100)

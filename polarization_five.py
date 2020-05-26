@@ -29,11 +29,11 @@ sigma2 = -7e9
 sigma3 = 0.7e9
 sigma4 = 3e9
 
-A0 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma0 
-A1 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma1 
-A2 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma2 
-A3 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma3 
-A4 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma4 
+A0 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma0
+A1 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma1
+A2 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma2
+A3 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma3
+A4 = alpha0*(T-752.0) + 2.0*((e*t)/(n*D))*(1-exp(-2.0*pi*n))-2*(q11+2*q12)*sigma4
 
 p0 = sqrt((-beta + sqrt(beta**2-4.0*A0*xi))/(2*xi))
 p1 = sqrt((-beta + sqrt(beta**2-4.0*A1*xi))/(2*xi))
@@ -75,8 +75,8 @@ plt.plot(x, P2, '-.',color = 'blue', linewidth=1.2, label=r'\textit{$\sigma = -7
 plt.plot(x, P3, ':',color ='green',linewidth=1.2, label=r'\textit{$\sigma = 0.7 GPa$}')
 plt.plot(x, P4, '+',color = 'green', linewidth=1.2, label=r'\textit{$\sigma = 3 GPa$}')
 
-plt.xlabel(r'\textit{$x$} ($nm$)')
-plt.ylabel(r'\textit{$P$} ($C/m^2$)',fontsize=16)
+plt.xlabel(r'$x$ ($nm$)')
+plt.ylabel(r'$P$ ($C/m^2$)',fontsize=16)
 plt.legend(loc=2)
 
 plt.savefig('figure6.eps', figsize=(3.30, 3.30), dpi=100)

@@ -30,8 +30,8 @@ plt.axvline(x=0.3052,linewidth=1,linestyle = 'dashed', color='red')
 plt.plot(p, w, 'b-', linewidth=1)
 #plt.legend(loc='upper left')
 #plt.xlabel(r'\textbf{$P_0$} ($C/m^2$)')
-plt.xlabel(r'\textit{$P_0$} ($C/m^2$)')
-plt.ylabel(r'\textit{$\xi_{180^\circ}$} ($nm$)',fontsize=16)
+plt.xlabel(r'$P_0$ ($C/m^2$)')
+plt.ylabel(r'$\xi_{180^\circ}$ ($nm$)',fontsize=16)
 
 
 plt.savefig('figure1.eps', figsize=(3.30, 3.30), dpi=100)
