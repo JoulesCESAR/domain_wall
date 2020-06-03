@@ -25,7 +25,7 @@ plt.xticks(fontsize = 10)
 plt.yticks(arange(0.0,12.0,1.0), fontsize = 9)
 
 
-ax.text(0.27, 6,r'$P_{crit} = \sqrt{-\frac{\beta}{2\zeta}}=0.3052 C/m^2$', rotation='vertical', color='red',fontsize=12)
+ax.text(0.27, 6,r'$P_{crit} = \sqrt{-\frac{\beta}{2\zeta}}=0.3052 C/m^2$', rotation='vertical', color='red',fontsize=10)
 plt.axvline(x=0.3052,linewidth=1,linestyle = 'dashed', color='red')
 plt.plot(p, w, 'b-', linewidth=1)
 #plt.legend(loc='upper left')
@@ -34,5 +34,5 @@ plt.xlabel(r'$P_0$ ($C/m^2$)')
 plt.ylabel(r'$\xi_{180^\circ}$ ($nm$)',fontsize=16)
 
 
-plt.savefig('figure1.eps', figsize=(3.30, 3.30), dpi=100)
+plt.savefig('/home/julio/Documents/Development/domain_wall/Figures/figure1.jpg', figsize=(3.30, 3.30), dpi=100)
 plt.show()

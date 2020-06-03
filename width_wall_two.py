@@ -63,5 +63,5 @@ plt.xlabel(r'$T$ ($K$)')
 plt.ylabel(r'$\xi_{180^\circ}$ ($nm$)',fontsize=16)
 plt.legend(loc=2)
 
-plt.savefig('figure7.eps', figsize=(3.30, 3.30), dpi=100)
+plt.savefig('/home/julio/Documents/Development/domain_wall/Figures/figure7.jpg', figsize=(3.30, 3.30), dpi=100)
 plt.show()

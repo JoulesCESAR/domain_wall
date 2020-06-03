@@ -26,5 +26,5 @@ plt.xlabel(r'$x$ ($nm$)')
 plt.ylabel(r'$P$ ($C/m^2$)',fontsize=16)
 
 
-plt.savefig('figure2.eps', figsize=(3.30, 3.30), dpi=100)
+plt.savefig('/home/julio/Documents/Development/domain_wall/Figures/figure2.jpg', figsize=(3.30, 3.30), dpi=100)
 plt.show()
